@@ -16,10 +16,11 @@ namespace AnimeList.Controllers
         {
             repository = repo;
         }
-        public ViewResult Index(int productPage = 1)
+        public ViewResult Index(string category, int productPage = 1)
          => View(new AnimeListViewModel
          {
              Titles = repository.Titles
+         .Where (p => category == null || p.Category == category)
          .OrderBy(p => p.AnimeTitleID)
          .Skip((productPage - 1) * PageSize)
          .Take(PageSize),

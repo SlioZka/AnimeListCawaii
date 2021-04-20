@@ -26,19 +26,19 @@ namespace AnimeList.Models
                     Name = "Sword Art Online",
                     Description = "Play for your life...",
                     Year = 2012,
-                    Category = "LitRPG"
+                    Category = "Action"
                 },
                 new AnimeTitle
                 {
                     Name = "Akame ga Kill",
                     Description = "Kill all pigs",
                     Year = 2010,
-                    Category = "Blood"
+                    Category = "Drama"
                 },
                 new AnimeTitle
                 {
                     Name = "Attack on Titan",
-                    Description = "Eren will be free =(",
+                    Description = "Eren will be fine =(",
                     Year = 2012,
                     Category = "Drama"
                 }

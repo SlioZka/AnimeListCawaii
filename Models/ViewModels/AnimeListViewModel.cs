@@ -9,5 +9,6 @@ namespace AnimeList.Models.ViewModels
     {
         public IEnumerable<AnimeTitle> Titles { get; set; }
         public PagingInfo PagingInfo { get; set; }
+        public string CurrentCategory { get; set; }
     }
 }
