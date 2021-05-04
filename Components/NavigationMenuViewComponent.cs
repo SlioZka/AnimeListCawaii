@@ -16,6 +16,7 @@ namespace AnimeList.Components
         }
         public IViewComponentResult Invoke()
         {
+            ViewBag.SelectedCategory = RouteData?.Values["category"];
             return View(repo.Titles
                 .Select(x => x.Category)
                 .Distinct()

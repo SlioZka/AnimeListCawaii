@@ -28,8 +28,12 @@ namespace AnimeList.Controllers
              {
                  CurrentPage = productPage,
                  ItemsPerPage = PageSize,
-                 TotalItems = repository.Titles.Count()
-             }
+                 TotalItems = category == null ?
+                    repository.Titles.Count():
+                    repository.Titles.Where(e =>
+                        e.Category == category).Count()
+             },
+             CurrentCategory = category
          });
     }
 }
